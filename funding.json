@@ -49,7 +49,7 @@
 {
             "guid": "bank",
             "type": "bank",
-            "address": "address": "Bank name: First Century Bank, Bank address: 1731 N Elm St Commerce GA 30529 USA, SWIFT code: FCNSUS32, Routing (ABA): 061120084, Account number: 4018497254335, Account type: CHECKING, Beneficiary: Fatima Castiglione Maldonado",
+            "address": "Bank name: First Century Bank, Bank address: 1731 N Elm St Commerce GA 30529 USA, SWIFT code: FCNSUS32, Routing (ABA): 061120084, Account number: 4018497254335, Account type: CHECKING, Beneficiary: Fatima Castiglione Maldonado",
             "description": "ACH payment account"
         },
 {
@@ -67,7 +67,7 @@
             "amount": 2000,
             "currency": "USD",
             "frequency": "monthly",
-            "channels": ["USDT", "USDC", "Bank", "Paypal"]
+            "channels": ["usdt", "usdc", "bank", "paypal"]
         }],
 
         "history": [{
@@ -75,7 +75,7 @@
             "income": 0,
             "expenses": 0,
             "taxes": 0,
-            "currency": "",
+            "currency": "USD",
             "description": ""
         }]
     }
