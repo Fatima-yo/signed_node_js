@@ -34,26 +34,26 @@
 
     "funding": {
         "channels": [{
-            "guid": "USDT",
+            "guid": "usdt",
             "type": "cryptocurrency",
             "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",
             "description": "TACC USDT account"
         },
 {
-            "guid": "USDC",
+            "guid": "usdc",
             "type": "cryptocurrency",
             "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",
             "description": "TACC USDC account"
         },
 
 {
-            "guid": "Bank",
+            "guid": "bank",
             "type": "bank",
             "address": "Bank name: First Century Bank, Bank address: 1731 N Elm St Commerce GA 30529 USA, SWIFT code: FCNSUS32, Routing (ABA): 061120084, Account number: 4018497254335, Account type: CHECKING, Beneficiary name: Fatima Castiglione Maldonado, Additional beneficiary names: FATIMA CASTIGLIONE MALDONADO",
             "description": "ACH payment account"
         },
 {
-            "guid": "PayPal",
+            "guid": "paypal",
             "type": "payment-provider",
             "address": "castiglionemaldonado@gmail.com",
             "description": "TACC PayPal account"
