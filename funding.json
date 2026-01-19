@@ -35,13 +35,13 @@
     "funding": {
         "channels": [{
             "guid": "usdt",
-            "type": "cryptocurrency",
+            "type": "other",
             "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",
             "description": "TACC USDT account"
         },
 {
             "guid": "usdc",
-            "type": "cryptocurrency",
+            "type": "other",
             "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",
             "description": "TACC USDC account"
         },
