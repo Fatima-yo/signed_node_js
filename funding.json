@@ -29,7 +29,7 @@
             "wellKnown": ""
         },
         "licenses": ["spdx:GPL-3.0"],
-        "tags": ["#nodejs", "#cryptography", "#cybersecurity", "#developer-tools", "#programming", "#supply-chain", "#CI-CD"]
+        "tags": ["nodejs", "cryptography", "cybersecurity", "developer-tools", "programming", "supply-chain", "ci-cd"]
     }],
 
     "funding": {
