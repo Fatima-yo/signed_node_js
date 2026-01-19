@@ -1,0 +1,91 @@
+{
+    "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+
+    // Optional. Version of the manifest contents.
+    "version": "v1.1.0",
+
+    // Required. The entity associated with the project, soliciting funds.
+    // This can be an individual, organisation, community etc.
+    "entity": {
+        "type": "organisation",                     // Required. [individual, group, organisation, other]. Use the closest approximation.
+        "role": "owner",                     // Required. [owner, steward, maintainer, contributor, other]. Use the closest approximation.
+        "name": "TACC - The Americas Consulting Company",                     // Required. Name of the entity. Max len 250.
+        "email": "hello@theamericasconsulting.com",                    // Required. Max len 250.
+        "phone": "+59892766400",                    // Optional. Generally suitable for organisations. Max len 32.
+        "description": "FOSS=focused Consulting Company",              // Required. Information about the entity. Max len 2000.
+        "webpageUrl": {
+            "url": "theamericasconsulting.com",                  // Required. Webpage with information about the entity. Starts with https:// or http://. Max len 250.
+            "wellKnown": ""             // Optional. If the above URL's hostname does not match the hostname of the funding.json manifest, this establishes provenance. Starts with https:// or http://. Max len 250.
+        }
+    },
+
+    // Optional. One or more projects for which the funding is solicited.
+    "projects": [{
+        "guid": "signed-node-js",                     // Required. A short unique ID for the project. Lowercase-alphanumeric-dashes only. eg: my-cool-project. Max len 32.
+        "name": "Creation of signed packages infrastructure for node.js",                     // Required. Name of the project. Max len 250.
+        "description": "There have been a lot of supply-chain attacks on projects, by way of creating fake or tainted node.js packages. The base for this attack is complete anonimity without even signature for the packages. We plan to use our experience in blockchain technologies, to create a new infrastructure for node.js where packages must be signed by developers and developer teams. Authorized signatures will be elected by the user and developer community.",              // Required. Description of the project. Max len 2000.
+        "webpageUrl": {
+            "url": "https://theamericasconsulting.com/signed_node_js.html",                  // Required. Webpage with information about the project. Starts with https:// or http://. Max len 250.
+            "wellKnown": ""             // Optional. If the above URL's hostname does not match the hostname of the funding.json manifest, this establishes provenance. Starts with https:// or http://. Max len 250.
+        },
+        "repositoryUrl": {
+            "url": "https://github.com/Fatima-yo/signed_node_js",                  // Required. URL of the repository where the project's source code and other assets are available. Starts with https:// or http://. Max len 250.
+            "wellKnown": ""             // Optional. If the above URL's hostname does not match the hostname of the funding.json manifest, this establishes provenance. Starts with https:// or http://. Max len 250.
+        },
+        "licenses": [spdx:GPL-3.0],                 // Required. The project's licenses (up to 5). For standard licenses, use the license ID from the SDPX index prefixed by "spdx:". eg: "spdx:GPL-3.0", "spdx:CC-BY-SA-4.0"
+        "tags": [#nodejs, #cryptography, #cybersecurity, #developer-tools, #programming, #supply-chain, #CI-CD ]                      // Required. Up to 10 general tags describing the project. Lowercase-alphanumeric-dashes (max 32 chars). eg: ["programming", "developer-tools"]. For reference, see tags.txt
+    }],
+
+    // Required.
+    "funding": {
+        // Required. This describes one or more channels via which the entity can receive funds.
+        "channels": [{
+            "guid": "USDT",                 // Required. A short unique ID for the channel. Lowercase-alphanumeric-dashes only. eg: mybank, my-paypal. Max len 32.
+            "type": "cryptocurrency",                 // Required. [bank, payment-provider, cheque, cash, other].
+            "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",              // Optional. A short unstructured textual representation of the payment address for the channel. eg: "Account: 12345 (branch: ABCX)", "mypaypal@domain.com", "https://payment-url.com", or a physical address for cheques. Max len 250.
+            "description": "TACC USDT account"           // Optional. Any additional description or instructions for the payment channel. Max len 500.
+        },
+{
+            "guid": "USDC",                 // Required. A short unique ID for the channel. Lowercase-alphanumeric-dashes only. eg: mybank, my-paypal. Max len 32.
+            "type": "cryptocurrency",                 // Required. [bank, payment-provider, cheque, cash, other].
+            "address": "0x1b661ff8D4C7c3c18c4D1591dCd8D1E45EAD2B2A",              // Optional. A short unstructured textual representation of the payment address for the channel. eg: "Account: 12345 (branch: ABCX)", "mypaypal@domain.com", "https://payment-url.com", or a physical address for cheques. Max len 250.
+            "description": "TACC USDC account"           // Optional. Any additional description or instructions for the payment channel. Max len 500.
+        },
+
+{
+            "guid": "Bank",                 // Required. A short unique ID for the channel. Lowercase-alphanumeric-dashes only. eg: mybank, my-paypal. Max len 32.
+            "type": "bank",                 // Required. [bank, payment-provider, cheque, cash, other].
+            "address": "Bank name: First Century Bank, Bank address: 1731 N Elm St Commerce GA 30529 USA, SWIFT code: FCNSUS32, Routing (ABA): 061120084, Account number: 4018497254335, Account type: CHECKING, Beneficiary name: Fatima Castiglione Maldonado, Additional beneficiary names: FATIMA CASTIGLIONE MALDONADO",              // Optional. A short unstructured textual representation of the payment address for the channel. eg: "Account: 12345 (branch: ABCX)", "mypaypal@domain.com", "https://payment-url.com", or a physical address for cheques. Max len 250.
+            "description": "ACH payment account"           // Optional. Any additional description or instructions for the payment channel. Max len 500.
+        },
+{
+            "guid": "PayPal",                 // Required. A short unique ID for the channel. Lowercase-alphanumeric-dashes only. eg: mybank, my-paypal. Max len 32.
+            "type": "payment-provider",                 // Required. [bank, payment-provider, cheque, cash, other].
+            "address": "castiglionemaldonado@gmail.com",              // Optional. A short unstructured textual representation of the payment address for the channel. eg: "Account: 12345 (branch: ABCX)", "mypaypal@domain.com", "https://payment-url.com", or a physical address for cheques. Max len 250.
+            "description": "TACC PayPal account"           // Optional. Any additional description or instructions for the payment channel. Max len 500.
+        }],
+
+        // Required. One or more funding and payment plans.
+        "plans": [{
+            "guid": "monthly",                 // Required. A short unique ID for the plan. Lowercase-alphanumeric-dashes only. eg: mybank, paypal. Max len 32.
+            "status": "active",               // Required. [active, inactive]. Indicates whether this plan is currently active or inactive.
+            "name": "starter support plan",                 // Required. Name of the funding plan. eg: "Starter support plan", "Infra hosting", "Monthly funding plan".
+            "description": "minimal funding to start the project",          // Optional. Any additional description or instructions for the funding plan.
+            "amount": 2000,                // Required. The solicited amount for this plan. 0 is a wildcard that indicates "any amount".
+            "currency": "USD",             // Required. Three letter ISO 4217 currency code. eg: USD
+            "frequency": "monthly",            // Required. [one-time, weekly, fortnightly, monthly, yearly, other]
+            "channels": [USDT, USDC, Bank, Paypal]              // Required. One or more channel IDs defined in channels[] via which this plan can accept payments.
+        }],
+
+        // Optional. A simple summary of funding history. Only include if at least one, either income or expenses, have to be communicated.
+        "history": [{
+            "year": 2024,               // Required. Year (fiscal, preferably).
+            "income": 0,                // Optional.
+            "expenses": 0,              // Optional.
+            "taxes": 0,                 // Optional.
+            "currency": "",             // Required. Three letter ISO 4217 currency code. eg: USD
+            "description": ""           // Optional. Any additional description. Max length 500.
+        }]
+    }
+}
+
